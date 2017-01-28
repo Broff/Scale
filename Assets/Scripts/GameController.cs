@@ -71,11 +71,11 @@ public class GameController : MonoBehaviour {
         Color c = colors.GetComponent<ColorSettings>().GetRandom();
         foreach(GameObject o in coloredObj){
             o.GetComponent<Renderer>().material.SetColor("_Color", c);
-            o.GetComponent<Renderer>().material.SetColor("_EMISSION", c);
+            //o.GetComponent<Renderer>().material.SetColor("_EMISSION", c);
             foreach (GameObject ob in o.GetComponent<ScaleController>().planes)
             {
                 ob.GetComponent<Renderer>().material.SetColor("_Color", c);
-                o.GetComponent<Renderer>().material.SetColor("_EMISSION", c);
+                //o.GetComponent<Renderer>().material.SetColor("_EMISSION", c);
             }
         }
     }
@@ -418,11 +418,11 @@ public class GameController : MonoBehaviour {
             GetRandomColorSwitch();
         }
         oNew.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-        oNew.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(newColor.r / 4.0f, newColor.g / 4.0f, newColor.b / 4.0f));
+        //oNew.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(newColor.r / 4.0f, newColor.g / 4.0f, newColor.b / 4.0f));
         foreach (GameObject o in oNew.GetComponent<ScaleController>().planes)
         {
             o.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-            o.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(newColor.r / 4.0f, newColor.g / 4.0f, newColor.b / 4.0f));
+            //o.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(newColor.r / 4.0f, newColor.g / 4.0f, newColor.b / 4.0f));
         }
     }    
 
@@ -440,11 +440,11 @@ public class GameController : MonoBehaviour {
         }
 
         oNew.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-        oNew.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(newColor.r / 4.0f, newColor.g / 4.0f, newColor.b / 4.0f));
+        //oNew.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(newColor.r / 4.0f, newColor.g / 4.0f, newColor.b / 4.0f));
         foreach (GameObject o in oNew.GetComponent<ScaleController>().planes)
         {
             o.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-            o.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(newColor.r / 4.0f, newColor.g / 4.0f, newColor.b / 4.0f));
+           // o.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(newColor.r / 4.0f, newColor.g / 4.0f, newColor.b / 4.0f));
         }
     }
 
